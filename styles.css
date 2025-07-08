@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./Images/bg-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 20px 30px;
+    margin-top: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.wrapper {
+    height: 105px;
+    padding: 0px 50px 15px;
+    background: transparent;
+    border: 8px groove #7cc5dd;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    background-color: black;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.4);
+
+}
+
+#ClockScreen {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: lighter;
+    color: white;
+    font-size: 40px;
+    word-spacing: 15px;
+}
+
+.time {
+    display: flex;
+    word-spacing: 95px;
+    margin-left: 15px;
+    color: white;
+    line-height: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+    position: relative;
+    bottom: 10px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+#stratBtn,
+#stopBtn {
+    width: 48%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #428dad;
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+#stopBtn {
+    background-color: #995996;
+}
+
+#stratBtn:hover,
+#stopBtn:hover {
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2);
+    transform: translateY(3px);
+    background-color: #87ddee;
+    color: black;
+}
+
+#stopBtn:hover {
+
+    background-color: #c89bee;
+}
+
+#stratBtn:disabled,
+#stopBtn:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+    color: black;
+}
+
+@media screen and (min-width:401px) and (max-width:500px) {
+    #ClockScreen {
+        font-size: 32px;
+        word-spacing: 10px;
+    }
+
+    .wrapper {
+        height: 85px;
+        padding: 0px 35px 15px;
+    }
+
+    .time {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        margin-left: 8px;
+        position: relative;
+        bottom: 30px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #ClockScreen {
+        font-size: 30px;
+        word-spacing: 8px;
+    }
+
+    .wrapper {
+        height: 75px;
+        padding: 0px 25px 15px;
+    }
+
+    .time {
+        gap: 58px;
+        margin-left: 10px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+    }
+
+    #stratBtn,
+    #stopBtn {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+}
